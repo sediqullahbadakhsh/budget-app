@@ -56,7 +56,6 @@ end
 group :development, :test do
   gem 'database_cleaner'
   gem 'debug'
-  gem 'rspec'
   gem 'rspec-rails'
   gem 'selenium-webdriver'
 end
