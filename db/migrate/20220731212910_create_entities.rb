@@ -3,8 +3,8 @@ class CreateEntities < ActiveRecord::Migration[7.0]
     create_table :entities do |t|
       t.string :name, null: false
       t.integer :amount, null: false
-      t.belongs_to :user, index: true, foriegn_key: true
-      t.belongs_to :group, index: true, foriegn_key: true
+      t.references :user, null: false, foreign_key: true
+      t.references :group, null: false, foreign_key: true
 
       t.timestamps
     end
