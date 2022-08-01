@@ -66,6 +66,8 @@ GEM
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
+    addressable (2.8.0)
+      public_suffix (>= 2.0.2, < 5.0)
     bcrypt (3.1.18)
     bindex (0.8.1)
     bootsnap (1.13.0)
@@ -110,6 +112,10 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
+    launchy (2.5.0)
+      addressable (~> 2.7)
+    letter_opener (1.8.1)
+      launchy (>= 2.2, < 3)
     loofah (2.18.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -139,6 +145,7 @@ GEM
       racc (~> 1.4)
     orm_adapter (0.5.0)
     pg (1.4.2-x64-mingw-ucrt)
+    public_suffix (4.0.7)
     puma (5.6.4)
       nio4r (~> 2.0)
     racc (1.6.0)
@@ -182,10 +189,6 @@ GEM
       actionpack (>= 5.0)
       railties (>= 5.0)
     rexml (3.2.5)
-    rspec (3.11.0)
-      rspec-core (~> 3.11.0)
-      rspec-expectations (~> 3.11.0)
-      rspec-mocks (~> 3.11.0)
     rspec-core (3.11.0)
       rspec-support (~> 3.11.0)
     rspec-expectations (3.11.0)
@@ -256,11 +259,11 @@ DEPENDENCIES
   ffi
   importmap-rails
   jbuilder
+  letter_opener
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.3, >= 7.0.3.1)
   rails-controller-testing
-  rspec
   rspec-rails
   selenium-webdriver
   sprockets-rails

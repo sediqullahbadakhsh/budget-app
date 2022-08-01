@@ -58,6 +58,7 @@ group :development, :test do
   gem 'debug'
   gem 'rspec-rails'
   gem 'selenium-webdriver'
+  gem 'letter_opener'
 end
 
 # ffi
