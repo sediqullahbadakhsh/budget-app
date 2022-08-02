@@ -3,8 +3,7 @@ class GroupsController < ApplicationController
 
   def index
     @user = current_user
-    @groups = Group.all
-    
+    @groups = Group.includes([image_attachment: :blob]).where(user: @user).order('created_at DESC')
   end
 
   def new
