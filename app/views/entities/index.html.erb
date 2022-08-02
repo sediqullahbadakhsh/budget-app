@@ -3,6 +3,8 @@
 <table  class="ui fixed table  table-bordered table-striped ">
 
 <%= number_to_currency @entity.sum(:amount)%>
+<%= link_to 'Back', user_groups_path %>
+
     <thead>
         <tr>
             <th> Name</th>
@@ -15,13 +17,12 @@
     <% @entity.each do |e|%>
         <tr>
             <td> <%=  e.name %> </td>
-            <td> <%=  e.amount %> </td>
+            <td> <%= number_to_currency  e.amount %> </td>
             <td>
-            <%= button_to 'Remove', user_group_entity_path(@user, e.group_id, e.id), method: :delete,   class:' btn btn-outline-danger btn-sm' %>  </td>
         </tr>
     <%end%>
 </tbody>
 
 </table>
-<span   align="right">
-<%= link_to "Add new Entities", new_user_group_entity_path , class:'nav-link' %></span>
+
+<%= link_to "add a new transaction", new_user_group_entity_path , class:'nav-link' %>

@@ -2,7 +2,7 @@ class EntitiesController < ApplicationController
   def index
     @user = current_user
     @groups = Group.find(params[:group_id])
-    @entity = @groups.entities
+    @entity = @groups.entities.order('created_at DESC')
   end
 
   def new
