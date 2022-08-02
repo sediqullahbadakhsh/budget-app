@@ -1,9 +1,9 @@
 <%@groups.each do |g|%>
 <p>
-    <%= link_to g.name, user_group_entities_path(@user, g.id) %>
     <%if g.image.attached?%>
     <%= image_tag g.image, class: 'category-image'%>
     <%end%>
+    <%= link_to g.name, user_group_entities_path(@user, g.id) %>
 </p>
 <%end%>
 
