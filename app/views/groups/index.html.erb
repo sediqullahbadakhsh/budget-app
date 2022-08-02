@@ -1,5 +1,10 @@
 <%@groups.each do |g|%>
+<p>
     <%= link_to g.name, user_group_entities_path(@user, g.id) %>
+    <%if g.image.attached?%>
+    <%= image_tag g.image, class: 'category-image'%>
+    <%end%>
+</p>
 <%end%>
 
 <%= link_to 'Add new Category', new_user_group_path(@user)%>
