@@ -1,2 +1,27 @@
-<h1>Entities#index</h1>
-<p>Find me in app/views/entities/index.html.erb</p>
+<h1 align="center"> All Entities</h1>
+
+<table  class="ui fixed table  table-bordered table-striped ">
+
+<%= number_to_currency @entity.sum(:amount)%>
+    <thead>
+        <tr>
+            <th> Name</th>
+            <th> Amount</th>
+            <th> Action</th>
+        </tr>
+    </thead>
+<tbody>
+
+    <% @entity.each do |e|%>
+        <tr>
+            <td> <%=  e.name %> </td>
+            <td> <%=  e.amount %> </td>
+            <td>
+            <%= button_to 'Remove', user_group_entity_path(@user, e.group_id, e.id), method: :delete,   class:' btn btn-outline-danger btn-sm' %>  </td>
+        </tr>
+    <%end%>
+</tbody>
+
+</table>
+<span   align="right">
+<%= link_to "Add new Entities", new_user_group_entity_path , class:'nav-link' %></span>
