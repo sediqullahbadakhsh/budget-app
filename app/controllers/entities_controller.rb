@@ -15,10 +15,10 @@ class EntitiesController < ApplicationController
     @entity.user = current_user
     @entity.group = Group.find(params[:group_id])
     if @entity.save
-      flash[:notice] = "Entity Successfully Created"
+      flash[:notice] = "Transaction added successfuly!"
       redirect_to user_group_entities_path
     else
-      flash[:alert] = "something was wrong please try again"
+      flash[:alert] = "Transaction declined!"
       render 'new'
     end
   end

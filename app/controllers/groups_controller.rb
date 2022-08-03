@@ -16,8 +16,10 @@ class GroupsController < ApplicationController
     @groups = Group.new(group_params)
     @groups.user = current_user
     if @groups.save
+      flash[:notice] = "Category added successfuly!"
       redirect_to user_groups_path
     else
+      flash[:alert] = "Category declined!"
       render 'new'
     end
   end
