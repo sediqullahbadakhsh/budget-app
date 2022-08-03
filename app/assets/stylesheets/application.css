@@ -20,10 +20,21 @@
   --appfont: "Roboto", sans-serif;
 }
 
--- .profile-image {
-  width: 40px;
-  height: 40px;
+.profile-image {
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
+}
+.nav-profile,
+.nav-fullname {
+  justify-self: center;
+  align-self: center;
+}
+.nav-fullname-text {
+  color: #fff;
+  font-family: var(--appfont);
+  font-size: 1.2rem;
+  padding-top: 5px;
 }
 .category-image {
   width: 60px;
@@ -92,4 +103,29 @@
   justify-content: center;
   align-items: center;
   color: var(--fontcolor);
+}
+.navbar,
+.offcanvas-body,
+.offcanvas {
+  background-color: var(--primrycolor);
+}
+.humberger,
+.closes {
+  filter: invert(100%) sepia(79%) saturate(100%) hue-rotate(86deg)
+    brightness(100%) contrast(119%);
+  width: 30px;
+}
+.closebtn {
+  border: none;
+  background-color: var(--primrycolor);
+}
+.offcanvas-title {
+  color: #fff;
+}
+.nav-links {
+  border: none;
+  background-color: var(--primrycolor);
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
 }
