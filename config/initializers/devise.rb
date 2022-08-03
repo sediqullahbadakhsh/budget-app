@@ -125,6 +125,7 @@ Devise.setup do |config|
   # a value of 20 is already extremely slow: approx. 60 seconds for 1 calculation).
   config.stretches = Rails.env.test? ? 1 : 12
 
+
   # Set up a pepper to generate the hashed password.
   # config.pepper = '3dc341a1fb991f98432791369f358c17539caaa32e0fc8ffb93d6ea4c60a8d5c162393c0f45c1177ff90863c5e5bb215b970f05dc422c62d9830be083b115573'
 
@@ -308,4 +309,5 @@ Devise.setup do |config|
   # When set to false, does not sign a user in automatically after their password is
   # changed. Defaults to true, so a user is signed in automatically after changing a password.
   # config.sign_in_after_change_password = true
+  config.navigational_formats = ['*/*', :html, :turbo_stream]
 end
