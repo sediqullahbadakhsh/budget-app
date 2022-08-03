@@ -1,12 +1,11 @@
-
+<p class="offconvase"> Categories </p>
 <%@groups.each do |g|%>
-<p>
-    <%if g.image.attached?%>
-        <%= image_tag g.image, class: 'category-image'%>
-    <%end%>
-    <%= link_to g.name, user_group_entities_path(@user, g.id) %>
-    <%= number_to_currency g.entities.where(user: current_user).sum(:amount)%>
-</p>
+    <div class="category-card">
+        <%= image_tag g.image, class: 'category-image' if g.image.attached?%>
+        <%= link_to g.name, user_group_entities_path(@user, g.id) %>
+        <%= number_to_currency g.entities.where(user: current_user).sum(:amount)%>
+    </div>
 <%end%>
-
-<%= link_to 'Add new Category', new_user_group_path(@user)%>
+<div class="category-container">
+    <%= link_to 'Add a new Category', new_user_group_path(@user), class: 'add-category-btn'%>
+</div>
