@@ -65,3 +65,31 @@
   padding-top: 10px;
   font-weight: 300;
 }
+.login-header {
+  background-color: var(--primrycolor);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  padding: 5px 3px;
+  margin-bottom: 20px;
+}
+
+.arrow-back {
+  width: 40px;
+  filter: invert(100%) sepia(79%) saturate(100%) hue-rotate(86deg)
+    brightness(100%) contrast(119%);
+}
+.login-top-btn {
+  background-color: var(--primrycolor);
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.forgot-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--fontcolor);
+}
