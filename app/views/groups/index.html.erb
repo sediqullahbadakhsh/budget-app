@@ -3,7 +3,7 @@
     <div class="category-card">
         <%= image_tag g.image, class: 'category-image' if g.image.attached?%>
         <%= link_to g.name, user_group_entities_path(@user, g.id) %>
-        <%= number_to_currency g.entities.where(user: current_user).sum(:amount)%>
+        <strong><%= number_to_currency g.entities.where(user: current_user).sum(:amount)%></strong>
     </div>
 <%end%>
 <div class="category-container">
