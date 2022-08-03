@@ -1,28 +1,15 @@
-<h1 align="center"> All Entities</h1>
-
-<table  class="ui fixed table  table-bordered table-striped ">
-
-<%= number_to_currency @entity.sum(:amount)%>
-<%= link_to 'Back', user_groups_path %>
-
-    <thead>
-        <tr>
-            <th> Name</th>
-            <th> Amount</th>
-            <th> Action</th>
-        </tr>
-    </thead>
-<tbody>
-
+<p class="offconvase"> TRANSACTIONS </p>
+<div class="transaction-header">
+    <span><%= @groups.name%></span>
+    <span class="bold"><%= number_to_currency @entity.sum(:amount)%></span>
+</div>
     <% @entity.each do |e|%>
-        <tr>
-            <td> <%=  e.name %> </td>
-            <td> <%= number_to_currency  e.amount %> </td>
-            <td>
-        </tr>
+        <div class="transaction-card">
+           <span><%=  e.name %></span>
+           <span class="bold"><%= number_to_currency  e.amount %></span>
+        </div>
     <%end%>
-</tbody>
-
-</table>
-
-<%= link_to "add a new transaction", new_user_group_entity_path , class:'nav-link' %>
+<div class="category-container transaction-btn">
+<%= link_to 'Back', user_groups_path, class: 'add-category-btn'%>
+<%= link_to "add a new transaction", new_user_group_entity_path, class:'add-category-btn' %>
+</div>
