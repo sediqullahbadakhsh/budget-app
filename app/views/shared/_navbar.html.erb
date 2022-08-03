@@ -17,9 +17,6 @@
             <p class="nav-fullname-text"><%= current_user.firstname%> <%= current_user.lastname %></p>
           </li>
           <li class="nav-item nav-links">
-            <%= link_to 'Edit profile', edit_user_registration_path, class: 'nav-links' %>
-          </li>
-          <li class="nav-item nav-links">
             <%= button_to "Logout", destroy_user_session_path, method: :delete, :class => 'nav-links'  %>
           </li>
           
