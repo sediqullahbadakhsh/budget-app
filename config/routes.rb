@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'splash_screen/index'
   root 'groups#index'
   devise_for :users
 
