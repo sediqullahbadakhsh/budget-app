@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
     if user_signed_in?
       super
     else
-      redirect_to new_user_session_path, notice: "Please Login to view that page!"
+      redirect_to splash_screen_index_path
     end
   end
 end
