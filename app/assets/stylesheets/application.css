@@ -13,7 +13,14 @@
  *= require_tree .
  *= require_self
  */
-.profile-image {
+:root {
+  --primrycolor: #3778c2;
+  --scndrycolor: #5fb523;
+  --fontcolor: #434b54;
+  --appfont: "Roboto", sans-serif;
+}
+
+-- .profile-image {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -21,4 +28,40 @@
 .category-image {
   width: 60px;
   height: 60px;
+}
+.splash-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.app-logo {
+  font-family: var(--appfont);
+  font-weight: 700;
+  padding-top: 50%;
+  font-size: 3rem;
+  color: var(--fontcolor);
+}
+.splash-btn {
+  position: absolute;
+  bottom: 0%;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  padding: 0 15px;
+}
+.login-btn {
+  background-color: var(--primrycolor);
+  color: #fff;
+  height: 50px;
+  font-size: 1.2rem;
+  padding-top: 10px;
+  font-weight: 300;
+}
+.signup-btn {
+  color: var(--fontcolor);
+  height: 50px;
+  font-size: 1.2rem;
+  padding-top: 10px;
+  font-weight: 300;
 }
