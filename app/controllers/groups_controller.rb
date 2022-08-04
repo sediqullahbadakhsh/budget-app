@@ -9,22 +9,22 @@ class GroupsController < ApplicationController
   def new
     @groups = Group.new
     @user = current_user
-
   end
 
   def create
     @groups = Group.new(group_params)
     @groups.user = current_user
     if @groups.save
-      flash[:notice] = "Category added successfuly!"
+      flash[:notice] = 'Category added successfuly!'
       redirect_to user_groups_path
     else
-      flash[:alert] = "Category declined!"
+      flash[:alert] = 'Category declined!'
       render 'new'
     end
   end
 
   private
+
   def group_params
     params.require(:group).permit(:name, :image)
   end
