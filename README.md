@@ -1,6 +1,16 @@
 # Bugdet App
 
-> This is a budget App, it allows users to manage their spendings according to their budget
+> This app allows users to create their categories of spending and add transactions to each category while tracking thier total spending on each category.
+
+- ![screenshot](./app/assets/images/Screenshot.PNG).
+
+## App URL
+
+[Budget App](https://hidden-scrubland-51470.herokuapp.com/)
+
+## Live Demo
+
+[Budget App live dmonistration](https://www.loom.com/share/6440c00d84bc4c98a13aa53cbcf9ca7a)
 
 ## Built With
 
