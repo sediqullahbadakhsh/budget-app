@@ -23,8 +23,8 @@
 ### Clone this repository
 
 ```bash
-$ git clone https://github.com/sediqullahbadakhsh/recipe-app-group-project.git
-$ cd recipe-app-group-project
+$ git clone https://github.com/sediqullahbadakhsh/budget-app.git
+$ cd budget-app
 ```
 
 ### Install gems
