@@ -7,7 +7,6 @@ RSpec.describe Group, type: :model do
   end
 
   it 'Create a valid category' do
-    # group = Group.new(user: @user, name: 'Groceries')
     expect(@group).to be_valid
   end
 
