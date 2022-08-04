@@ -70,3 +70,7 @@ Give a ⭐️ if you like this project!
 - Hat tip to anyone whose code was used
 - Inspiration
 - etc
+
+## Credit Design
+
+All credits regarding the design idea of this project goes to the [Creative Commons](https://creativecommons.org/licenses/by-nc/4.0/) and thanks for this beautiful design.
